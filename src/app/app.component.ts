@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {PosixMonitorComponent} from './posix-monitor/posix-monitor.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'IPCQueueMonitor';
+  monitors = [];
+
+  constructor() {
+    this.createMonitor();
+  }
+
+  createMonitor() {
+    this.monitors.push(new PosixMonitorComponent());
+  }
 }

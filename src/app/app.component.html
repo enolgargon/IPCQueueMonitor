@@ -1,2 +1,8 @@
-<app-posix-monitor></app-posix-monitor>
-<app-posix-monitor></app-posix-monitor>
+<div class="container">
+  <app-posix-monitor *ngFor="let monitor of monitors"></app-posix-monitor>
+
+  <button (click)="createMonitor()" class="btn btn-light btn-lg btn-block"
+          style="height: 1in; width: 80vw; margin: 0.5in auto"
+          type="button">+
+  </button>
+</div>
